@@ -1,0 +1,409 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera debajo de la barra */
+}
+
+.navbar {
+  height: 115px; /* Altura de la barra de navegación */
+  background-color: white; /* Fondo blanco */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Espaciado interno a los lados */
+  position: relative; /* Necesario para el menú móvil */
+}
+
+.logo {
+  margin-left: 0;
+  padding-right: 500px;
+}
+
+.logo-image {
+  height: 110px;
+  width: auto;
+  display: block;
+  margin: 0;
+}
+
+.all-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  gap: 50px;
+
+}
+
+.all-links li a {
+  font-size: 20px;
+  color:  rgb(83,175,242);
+  text-decoration: none;
+}
+
+.all-links li a:hover {
+  color: #0056b3; /* Azul más claro al pasar el cursor */
+}
+
+/*Underline efecto, código de las lineas y animación*/
+
+/* Base styles for the link */
+.underline-effect {
+  position: relative;
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente si es necesario */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  color: #003399; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+}
+
+/* Create the underline effect */
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Espacio entre el texto y la línea (ajústalo según prefieras) */
+  width: 100%; /* Longitud de la línea (puedes cambiarla a un porcentaje menor si no quieres que abarque todo el texto) */
+  height: 2px; /* Grosor de la línea */
+  background-color: #003399; /* Color de la línea */
+  transition: width 0.3s ease; /* Efecto de transición opcional */
+}
+
+/* Hover effect */
+.underline-effect:hover::after {
+  width: 120%; /* Amplitud mayor en hover (ajústalo a tu gusto) */
+}
+
+
+
+/*Fondo del inicio en la primera parte Background_inicio*/
+
+.hero {
+  background-image: url('../images/background_inicio.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  margin-top: 115px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.services {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.services h2 {
+  margin-top: 50px;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  line-height: 62px;
+  font-weight: 600px;
+}
+
+.services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto 0; /* Centra las tarjetas */
+  padding: 0 10px;
+  gap: 13px; /* Espaciado entre tarjetas */
+  justify-content: center;
+}
+
+/* Estilo para las tarjetas */
+.services .card {
+  background: white;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04); /* Sombra de tarjeta */
+  width: calc(100% / 3 - 30px); /* Ancho de las tarjetas */
+  max-width: 600px; /* Evita que sean muy anchas */
+  max-height: 550px;
+  text-align: center;
+  overflow: hidden; /* Para que la imagen no se salga del borde */
+  border-radius: 25px 25px 0 0;
+}
+
+/* Imagen de las tarjetas */
+.services .card img {
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  height: 50%; /* Altura del 50% de la tarjeta */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+/* Contenido de las tarjetas */
+.services .card .card-content {
+  padding: 20px;
+  color: white;
+}
+
+.services .card .card-content h3 {
+  margin-bottom: 15px;
+  color: rgb(13, 20, 26);
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.services .card .card-content p {
+  margin-bottom: 10px;
+  color: rgb(86, 88, 94);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contacto {
+  background-color: white;
+}
+
+/* Sección principal */
+.main-content {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos a los lados */
+  align-items: center; /* Centra verticalmente */
+  max-width: 1200px; /* Ancho máximo de la sección */
+  margin: 100px auto; /* Centra la sección horizontalmente y agrega espacio debajo de la barra */
+  padding: 20px;
+  gap: 20px; /* Espacio entre el texto y la imagen */
+  background-color: white;
+}
+
+/* Contenedor de texto */
+.text-container {
+  flex: 1; /* Ocupa el espacio necesario para el texto */
+  max-width: 38%; /* Ancho máximo del texto */
+}
+
+.text-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-container .button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.text-container .button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de imagen */
+.image-container {
+  flex: 1; /* Ocupa el espacio restante */
+  position: relative; /* Permite colocar el recuadro azul encima */
+  max-width: 50%; /* Ancho máximo de la imagen */
+}
+
+.image-container img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Recuadro azul encima de la imagen */
+.image-container .overlay {
+  position: absolute; /* Para posicionar el recuadro encima de la imagen */
+  bottom: -10px; /* Espaciado desde la parte inferior */
+  left: 24px; /* Espaciado desde la izquierda */
+  background-color: rgb(145,180,229);
+  color: white;
+  padding: 15px;
+  max-width: 80%; /* Limita el ancho del recuadro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra alrededor del recuadro */
+  font-weight: bold;
+}
+
+.image-container .overlay p {
+  margin: 0;
+  font-size: 1.0rem; /* Ajusta el tamaño del texto en el recuadro */
+  line-height: 23px;
+  color: black;
+  font-weight: 700;
+}
+
+/* Contenedor principal de la sección de contacto */
+.contacto {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos a los lados */
+  align-items: center; /* Alinea los elementos al inicio verticalmente */
+  max-width: 1200px; /* Ancho máximo de la sección */
+  margin: 0 auto; /* Centra la sección horizontalmente */
+  padding: 20px;
+  gap: 20px; /* Espacio entre el texto y el formulario */
+  background-color: white;
+}
+
+/* Contenedor de texto */
+.contacto .text-container {
+  flex: 1; /* Ocupa el espacio necesario para el texto */
+  max-width: 38%; /* Ancho máximo del texto */
+}
+
+.contacto .text-container h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 62px;
+  font-weight: 600;
+}
+
+.contacto .text-container p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(86, 88, 94);
+}
+
+/* Contenedor del formulario */
+.contacto .contact-form {
+  flex: 1; /* Ocupa el espacio necesario para el formulario */
+  max-width: 60%; /* Ancho máximo del formulario */
+  margin: 0; /* Elimina el margen automático */
+  text-align: left;
+  padding: 20px;
+}
+
+/* Estilos adicionales para el formulario */
+.contact-form .form-group {
+  margin-bottom: 20px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.text-footer{
+  flex: 1;
+  max-width: 58%;
+  color: white;
+  margin-top: 10px;
+}
+
+.text-footer h3 {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.text-footer p {
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.text-contacto {
+  color: white;
+}
