@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Hace que el desplazamiento de la página sea suave */
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif; /* Establece la fuente predeterminada del cuerpo del documento */
+    line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
+  }
+  
+  header { 
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    left: 0; /* Posiciona el encabezado en el lado izquierdo */
+    z-index: 5; /* Asegura que el encabezado esté por encima de otros elementos */
+    width: 100%; /* Hace que el encabezado ocupe todo el ancho de la página */
+    display: flex; /* Utiliza flexbox para el diseño del encabezado */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background: white; /* Establece el fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera debajo del encabezado */
+  }
+  
+  .navbar {
+    height: 115px; /* Establece la altura de la barra de navegación */
+    background-color: white; /* Establece el fondo blanco */
+    display: flex; /* Utiliza flexbox para el diseño de la barra de navegación */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    padding: 0 20px; /* Añade un espaciado interno de 20 píxeles a los lados */
+    position: relative; /* Necesario para el menú móvil */
+  }
+  
+  .logo {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    padding-right: 500px; /* Añade un padding derecho de 500 píxeles */
+  }
+  
+  .logo-image {
+    height: 110px; /* Establece la altura de la imagen del logo */
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+    display: block; /* Hace que la imagen sea un bloque */
+    margin: 0; /* Elimina el margen */
+  }
+  
+  .all-links {
+    list-style: none; /* Elimina los estilos de lista */
+    display: flex; /* Utiliza flexbox para el diseño de los enlaces */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    text-decoration: none; /* Elimina la decoración del texto */
+    gap: 50px; /* Añade un espacio de 50 píxeles entre los elementos */
+  }
+  
+  .all-links li a {
+    font-size: 20px; /* Establece el tamaño de la fuente */
+    color: rgb(83,175,242); /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+  }
+  
+  .all-links li a:hover {
+    color: #0056b3; /* Cambia el color del texto al pasar el cursor */
+  }
+  
+  /*Underline efecto, código de las lineas y animación*/
+  
+  /* Base styles for the link */
+  .underline-effect {
+    position: relative; /* Posiciona el elemento relativamente */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente */
+    font-size: 16px; /* Establece el tamaño de la fuente */
+    color: #003399; /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+  }
+  
+  /* Create the underline effect */
+  .underline-effect::after {
+    content: ''; /* Añade contenido vacío */
+    position: absolute; /* Posiciona el elemento absolutamente */
+    left: 0; /* Posiciona el elemento a la izquierda */
+    bottom: -4px; /* Posiciona el elemento 4 píxeles debajo del texto */
+    width: 100%; /* Establece el ancho del elemento */
+    height: 2px; /* Establece la altura del elemento */
+    background-color: #003399; /* Establece el color de fondo */
+    transition: width 0.3s ease; /* Añade una transición suave al ancho */
+  }
+  
+  /* Hover effect */
+  .underline-effect:hover::after {
+    width: 120%; /* Aumenta el ancho al pasar el cursor */
+  }
+  
+  /*Fondo del inicio en la primera parte Background_inicio*/
+  
+  .hero {
+    background-image: url('../images/background_inicio.webp'); /* Establece la imagen de fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 75vh; /* Establece la altura al 75% de la altura de la ventana */
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Establece el color del texto a blanco */
+    padding: 0 1rem; /* Añade un padding de 1 rem a los lados */
+    margin-top: 115px; /* Añade un margen superior de 115 píxeles */
+  }
+
+  .tarjetas {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .tarjetas h2 {
+    margin-top: 50px; /* Añade un margen superior */
+    font-size: 48px; /* Establece el tamaño de la fuente */
+    color: rgb(255, 255, 255); /* Establece el color del texto */
+    line-height: 62px; /* Establece la altura de línea */
+    font-weight: 600px; /* Establece el peso de la fuente */
+  }
+
+  .tarjetas .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 0 10px;
+    gap: 13px;
+    justify-content: center;
+  }
+
+  .tarjetas .card {
+    background-color: white;
+    opacity: 0.5; /* 50% de transparencia */;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    width: calc (100% / 3 - 30px);
+    max-width: 600px;
+    max-height: 550px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .tarjetas .card .card-content {
+    padding: 20px;
+    color: black;
+  }
+
+  .tarjetas .card .card-content h3 {
+    margin-bottom: 15px; /* Añade un margen inferior */
+    color: rgb(13, 20, 26); /* Establece el color del texto */
+    line-height: 23px; /* Establece la altura de línea */
+    font-weight: 700; /* Establece el peso de la fuente */
+  }
+  
+  .tarjetas .card .card-content p {
+    margin-bottom: 10px; /* Añade un margen inferior */
+    color: rgb(86, 88, 94); /* Establece el color del texto */
+    font-weight: 400; /* Establece el peso de la fuente */
+    line-height: 24px; /* Establece la altura de línea */
+  }

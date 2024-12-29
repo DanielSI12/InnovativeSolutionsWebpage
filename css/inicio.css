@@ -162,6 +162,7 @@ header {
   justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
+
 /* Estilo para las tarjetas */
 .services .card {
   background: white; /* Establece el color de fondo */
@@ -765,27 +766,31 @@ footer {
   gap: 20px; /* Añade un espacio entre los elementos */
 }
 
-.text-footer{
-  flex: 1;
-  max-width: 58%;
-  color: white;
-  margin-top: 10px;
+/* Estilo para el texto en el pie de página */
+.text-footer {
+  flex: 1; /* Ocupa el espacio necesario */
+  max-width: 58%; /* Establece el ancho máximo */
+  color: white; /* Establece el color del texto */
+  margin-top: 10px; /* Añade un margen superior */
 }
 
+/* Estilo para los encabezados en el pie de página */
 .text-footer h3 {
-  color: rgb(255, 255, 255);
-  font-size: 26px;
-  line-height: 34px;
-  font-weight: 600;
+  color: rgb(255, 255, 255); /* Establece el color del texto */
+  font-size: 26px; /* Establece el tamaño de la fuente */
+  line-height: 34px; /* Establece la altura de línea */
+  font-weight: 600; /* Establece el peso de la fuente */
 }
 
+/* Estilo para los párrafos en el pie de página */
 .text-footer p {
-  color: white;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
+  color: white; /* Establece el color del texto */
+  font-size: 14px; /* Establece el tamaño de la fuente */
+  line-height: 18px; /* Establece la altura de línea */
+  font-weight: 400; /* Establece el peso de la fuente */
 }
 
+/* Estilo para el texto de contacto en el pie de página */
 .text-contacto {
-  color: white;
+  color: white; /* Establece el color del texto */
 }
