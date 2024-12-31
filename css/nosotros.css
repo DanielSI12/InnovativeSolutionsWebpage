@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0; /* Elimina el margen predeterminado de todos los elementos */
     padding: 0; /* Elimina el padding predeterminado de todos los elementos */
@@ -12,7 +11,7 @@
     font-family: 'Open Sans', sans-serif; /* Establece la fuente predeterminada del cuerpo del documento */
     line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
   }
-  
+
   header { 
     position: fixed; /* Fija el encabezado en la parte superior de la página */
     top: 0; /* Posiciona el encabezado en la parte superior */
@@ -93,123 +92,81 @@
   .underline-effect:hover::after {
     width: 120%; /* Aumenta el ancho al pasar el cursor */
   }
-  
-  /*Fondo del inicio en la primera parte Background_inicio*/
-  
-  .hero {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-    ), url('../images/fondo_servicios.avif');
-    background-size: cover;
-    background-position: center;
-    height: 150vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 1rem;
-    margin-top: 115px;
-  }
-  
-  /* Contenido del hero */
-  .hero-content {
-    margin-bottom: 2rem;
-  }
-
-  .hero-content h1 {
-    padding: 100px;
-    text-align: center;
-    margin-top: 100px;
-    font-size: 64px;
-    line-height: 83px;
-    font-weight: 600;
-  }
-
-  .hero-content p {
-
-    margin-top: 70px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-  }
-  
-  /* Sección de tarjetas */
-  .tarjetas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  /* Estilo para las tarjetas */
-  .cards {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-
-  }
-  
-  .card-content h3 {
-    margin-bottom: 15px;
-    color: white;
-    line-height: 23px;
-    font-weight: 700;
-  }
-  
-  .card-content p {
-    margin-bottom: 10px;
-    color: ;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
-
-  .digital {
-    background-color: white;
-  }
-
 
   .main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 20px;
-    gap: 20px;
-    background-color: white;
+    margin-top: 150px;
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Coloca los elementos a los lados */
+    align-items: center; /* Centra verticalmente */
+    max-width: 1200px; /* Establece el ancho máximo */
+    margin: 100px auto; /* Centra la sección horizontalmente y añade un margen superior */
+    padding: 20px; /* Añade un padding interno */
+    gap: 20px; /* Añade un espacio entre los elementos */
+    background-color: white; /* Establece el color de fondo */
   }
-
+  
+  /* Contenedor de texto */
   .text-container {
-    flex: 1;
-    max-width: 38%;
+    flex: 1; /* Ocupa el espacio necesario */
+    max-width: 38%; /* Establece el ancho máximo */
   }
-
+  
   .text-container h1 {
-    font-size: 26px;
-    line-height: 34px;
-    font-weight: 700;
-    color: rgb(13, 20, 26;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Establece el tamaño de la fuente */
+    margin-bottom: 1rem; /* Añade un margen inferior */
   }
-
-  .text-container {
-    
+  
+  .text-container p {
+    margin-bottom: 1rem; /* Añade un margen inferior */
+    font-size: 1rem; /* Establece el tamaño de la fuente */
+    line-height: 1.6; /* Establece la altura de línea */
+  }
+  
+  .text-container .button {
+    display: inline-block; /* Hace que el botón sea un elemento en línea */
+    padding: 0.8rem 1.5rem; /* Añade un padding interno */
+    background-color: #007bff; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+    font-size: 1rem; /* Establece el tamaño de la fuente */
+    border-radius: 25px; /* Redondea las esquinas */
+    transition: background 0.3s ease; /* Añade una transición suave al fondo */
+  }
+  
+  .text-container .button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+  }
+  
+  /* Contenedor de imagen */
+  .image-container {
+    flex: 1; /* Ocupa el espacio restante */
+    position: relative; /* Permite colocar el recuadro azul encima */
+    max-width: 50%; /* Establece el ancho máximo */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-radius: 10px; /* Redondea las esquinas */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  }
+  
+  /* Recuadro azul encima de la imagen */
+  .image-container .overlay {
+    position: absolute; /* Posiciona el recuadro absolutamente */
+    bottom: -10px; /* Posiciona el recuadro 10 píxeles por debajo */
+    left: 24px; /* Posiciona el recuadro 24 píxeles a la izquierda */
+    background-color: rgb(145,180,229); /* Establece el color de fondo */
+    color: white; /* Establece el color del texto */
+    padding: 15px; /* Añade un padding interno */
+    max-width: 80%; /* Establece el ancho máximo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+    font-weight: bold; /* Establece el peso de la fuente */
+  }
+  
+  .image-container .overlay p {
+    margin: 0; /* Elimina el margen */
+    font-size: 1.0rem; /* Establece el tamaño de la fuente */
+    line-height: 23px; /* Establece la altura de línea */
+    color: black; /* Establece el color del texto */
+    font-weight: 700; /* Establece el peso de la fuente */
   }

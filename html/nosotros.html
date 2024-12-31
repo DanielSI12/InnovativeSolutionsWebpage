@@ -7,22 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Innovative Solutions</h1>
-        <nav>
-            <ul>
-                <li><a href="../html/inicio.html">Inicio</a></li>
-                <li><a href="../html/nosotros.html">Nosotros</a></li>
-                <li><a href="../html/servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive en dispositivos móviles -->
+      <title>Innovative Solutions CX</title> <!-- Título que se muestra en la pestaña del navegador -->
+      <link rel="stylesheet" href="../css/inicio.css"> <!-- Vincula la hoja de estilos personalizada -->
+      <link rel="stylesheet" href="https://cdn.zyrosite.com/u1/google-fonts/font-faces?family=Roboto:wght@400;600&family=Open+Sans:wght@400;500;600&family=Montserrat:wght@400&display=swap"> <!-- Importa fuentes de Google Fonts -->
+    </head>
+    <body>
+      <!-- Inicio del encabezado -->
+      <header>
+        <nav class="navbar">
+          <h2 class="logo">
+            <img src="../images/logo_empresa.avif" alt="Logo página" class="logo-image"> <!-- Muestra el logotipo de la empresa -->
+          </h2>
+          <input type="checkbox" id="menu-toggler"> <!-- Control para el menú desplegable en dispositivos móviles -->
+          <label for="menu-toggler" id="hamburger-btn">
+            <!-- Icono de menú (hamburguesa) para dispositivos móviles -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none"/> <!-- Espacio transparente -->
+              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/> <!-- Tres líneas horizontales representando el menú -->
+            </svg>
+          </label>  
+          <ul class="all-links">
+            <!-- Lista de navegación principal -->
+            <li><a href="../html/inicio.html" class="underline-effect">Inicio</a></li>
+            <li><a href="../html/servicios.html" class="underline-effect">Servicios</a></li>
+            <li><a href="../html/nosotros.html" class="underline-effect">Nosotros</a></li>
+            <li><a href="../html/contacto.html" class="underline-effect">Contácto</a></li>
+          </ul>
+      </header>
+      <!-- Sección de contenido principal -->
+    <section class="main-content">
+    <div class="text-container">
+    <h1>Transformación tecnológica para tu empresa</h1> <!-- Encabezado -->
+      <p>Innovative Solutions CX transforma la experiencia del cliente mediante soluciones tecnológicas avanzadas que fusionan lo humano con lo digital, permitiendo a las empresas alcanzar un nuevo nivel de eficiencia y satisfacción.
+
+        Nos diferenciamos por nuestro equipo joven y comprometido que combina creatividad y solidez técnica para ofrecer soluciones disruptivas y de alto impacto.
+        
+        Estamos aquí para ser su socio estratégico y confiable en el camino hacia la transformación digital y una experiencia de cliente inmejorable.</p> <!-- Descripción -->
+      <a href="#contacto" class="button">Contáctanos</a> <!-- Botón que lleva al formulario de contacto -->
+    </div>
+    <div class="image-container">
+      <img src="../images/main-content.avif" alt="Equipo de trabajo"> <!-- Imagen con un equipo de trabajo -->
+      <div class="overlay">
+        <p>"Empoderamos a las empresas con soluciones tecnológicas diseñadas para mejorar cada punto de contacto con sus clientes, impulsando una experiencia de cliente memorable y eficaz."</p>
+      </div>
+    </div>
+  </section>
+      <section class="about-us">
+
+      </section>
     <main>
-        <section>
-            <h2>Sobre Nosotros</h2>
-            <p>Bienvenido a Innovative Solutions. Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras para su negocio.</p>
-        </section>
     </main>
     <footer>
         <p>&copy; 2023 Innovative Solutions. Todos los derechos reservados.</p>
