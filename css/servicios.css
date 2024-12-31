@@ -175,7 +175,6 @@
   
   .card-content p {
     margin-bottom: 10px;
-    color: ;
     font-weight: 400;
     line-height: 24px;
   }
@@ -206,10 +205,63 @@
     font-size: 26px;
     line-height: 34px;
     font-weight: 700;
-    color: rgb(13, 20, 26;
+    color: rgb(13, 20, 26);
     margin-bottom: 1rem;
   }
 
-  .text-container {
-    
+  .text-container p {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(86, 88, 94);
+  }
+
+  .image-container {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+  }
+
+  .image-container img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  footer {
+    background-color: #333; /* Establece el color de fondo */
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Coloca los elementos a los lados */
+    align-items: center; /* Alinea los elementos verticalmente */
+    max-width: auto; /* Establece el ancho máximo */
+    padding: 20px; /* Añade un padding interno */
+    gap: 20px; /* Añade un espacio entre los elementos */
+  }
+  
+  .text-footer {
+    flex: 1; /* Ocupa el espacio necesario */
+    max-width: 58%; /* Establece el ancho máximo */
+    color: white/* General Reset */
+  }
+  
+  /* Estilo para los encabezados en el pie de página */
+  .text-footer h3 {
+    color: rgb(255, 255, 255); /* Establece el color del texto */
+    font-size: 26px; /* Establece el tamaño de la fuente */
+    line-height: 34px; /* Establece la altura de línea */
+    font-weight: 600; /* Establece el peso de la fuente */
+  }
+  
+  /* Estilo para los párrafos en el pie de página */
+  .text-footer p {
+    color: white; /* Establece el color del texto */
+    font-size: 14px; /* Establece el tamaño de la fuente */
+    line-height: 18px; /* Establece la altura de línea */
+    font-weight: 400; /* Establece el peso de la fuente */
+  }
+  
+  /* Estilo para el texto de contacto en el pie de página */
+  .text-contacto {
+    color: white; /* Establece el color del texto */
   }
