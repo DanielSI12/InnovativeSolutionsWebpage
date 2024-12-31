@@ -66,6 +66,52 @@ header {
   color: #0056b3; /* Cambia el color del texto al pasar el cursor */
 }
 
+.all-links li a.active {
+  color: #0056b3;
+}
+#menu-toggler {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+  cursor: pointer;
+  background-color: rgb(109, 81, 40);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .logo {
+    padding-right: 0;
+  }
+  .all-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  #menu-toggler:checked + #hamburger-btn + .all-links {
+    display: flex;
+  }
+
+  #hamburger-btn {
+    display: block;
+  }
+.all-links li {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.all-links a {
+  font-size: 18px;
+}
+
+}
+
 /*Underline efecto, código de las lineas y animación*/
 
 /* Base styles for the link */
