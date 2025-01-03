@@ -332,90 +332,90 @@ header {
   font-weight: 700; /* Establece el peso de la fuente */
 }
 
-/* Contenedor principal de la sección de contacto */
-.contacto {
+/* Sección de contacto */
+.contact-section {
+  width: 100%; /* Establece el ancho al 100% */
+  padding: 20px; /* Añade un padding interno */
+  box-sizing: border-box;
+}
+
+.container {
   display: flex; /* Utiliza flexbox para el diseño */
-  justify-content: space-between; /* Coloca los elementos a los lados */
-  align-items: center; /* Alinea los elementos verticalmente */
   max-width: 1200px; /* Establece el ancho máximo */
-  margin: 0 auto; /* Centra la sección horizontalmente */
-  padding: 20px; /* Añade un padding interno */
-  gap: 20px; /* Añade un espacio entre los elementos */
-  background-color: white; /* Establece el color de fondo */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+  padding: 40px; /* Añade un padding interno */
+  border-radius: 8px; /* Redondea las esquinas */  
+  width: 90%; /* Establece el ancho al 90% */ 
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
-/* Contenedor de texto */
-.contacto .text-container {
-  flex: 1; /* Ocupa el espacio necesario */
-  max-width: 38%; /* Establece el ancho máximo */
+.left {
+  flex: 1; /* Ocupa el espacio necesario */ 
+  margin-right: 20px; /* Añade un margen derecho de 20 píxeles */
+
 }
 
-.contacto .text-container h2 {
+.left h1 {
   font-size: 48px; /* Establece el tamaño de la fuente */
-  margin-bottom: 20px; /* Añade un margen inferior */
+  margin-bottom: 10px; /* Añade un margen inferior de 10 píxeles */ 
+  font-weight: 6000;
   line-height: 62px; /* Establece la altura de línea */
-  font-weight: 600; /* Establece el peso de la fuente */
 }
 
-.contacto .text-container p {
-  margin-bottom: 30px; /* Añade un margen inferior */
-  font-size: 16px; /* Establece el tamaño de la fuente */
-  line-height: 24px; /* Establece la altura de línea */
-  color: rgb(86, 88, 94); /* Establece el color del texto */
+.left p {
+  font-size: 16px; /* Establece el tamaño de la fuente */ 
+  margin-bottom: 20px; /* Añade un margen inferior de 20 píxeles */ 
+  color: rgb(86, 88, 94);
 }
 
-/* Contenedor del formulario */
-.contacto .contact-form {
-  flex: 1; /* Ocupa el espacio necesario */
-  max-width: 60%; /* Establece el ancho máximo */
-  margin: 0; /* Elimina el margen */
-  text-align: left; /* Alinea el texto a la izquierda */
-  padding: 20px; /* Añade un padding interno */
+.left .contact-info {
+  font-size: 16px; /* Establece el tamaño de la fuente */ 
+  color: #555; /* Establece el color del texto */
+  line-height: 1.6; /* Establece la altura de línea */  
 }
 
-/* Estilos adicionales para el formulario */
-.contact-form .form-group {
-  margin-bottom: 20px; /* Añade un margen inferior */
-  flex: 1; /* Ocupa el espacio necesario */
-  position: relative; /* Posiciona el elemento relativamente */
-  max-width: 100%; /* Establece el ancho máximo */
+.right {
+  flex: 1; /* Ocupa el espacio necesario */ 
+} 
+
+form {
+  display: flex; /* Utiliza flexbox para el diseño */
+  flex-direction: column; /* Coloca los elementos en columna */ 
 }
 
-.contact-form label {
-  display: block; /* Hace que el elemento sea un bloque */
-  margin-bottom: 8px; /* Añade un margen inferior */
+form label {
   font-size: 14px; /* Establece el tamaño de la fuente */
-  line-height: 21px; /* Establece la altura de línea */
+  margin-bottom: 5px;
+  color: #333; /* Establece el color del texto */
 }
 
-.contact-form input, 
-.contact-form textarea {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
+form input, form textarea { 
+  font-size: 14px; /* Establece el tamaño de la fuente */
   padding: 10px; /* Añade un padding interno */
-  border: 1px solid #ccc; /* Añade un borde */
-  border-radius: 5px; /* Redondea las esquinas */
-  font-size: 1rem; /* Establece el tamaño de la fuente */
+  margin-bottom: 20px; /* Añade un margen inferior de 20 píxeles */
+  border: 1px solid #ddd; /* Añade un borde de 1 píxel */ 
+  border-radius: 10px; /* Redondea las esquinas */
+  width: 100%; /* Establece el ancho al 100% */ 
+  box-sizing: border-box; /* Ajusta el tamaño del borde y el relleno */
 }
 
-.contact-form textarea {
-  resize: none; /* Desactiva la capacidad de redimensionar */
+form button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.contact-form .button {
-  display: inline-block; /* Hace que el botón sea un elemento en línea */
-  padding: 0.8rem 1.5rem; /* Añade un padding interno */
-  background-color: #007bff; /* Establece el color de fondo */
-  color: white; /* Establece el color del texto */
-  border: none; /* Elimina el borde */
-  border-radius: 25px; /* Redondea las esquinas */
-  font-size: 1rem; /* Establece el tamaño de la fuente */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease; /* Añade una transición suave al fondo */
+form button:hover {
+  background-color: #0056b3;
 }
 
-.contact-form .button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
-}
+
 
 footer {
   background-color: #333; /* Establece el color de fondo */

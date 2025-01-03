@@ -4,26 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Innovative Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
 </head>
 <body>
-    <header>
-        <h1>Contacto</h1>
-    </header>
-    <main>
-        <form action="submit_form.php" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+  <!-- Inicio del encabezado -->
+  <header>
+    <nav class="navbar">
+      <h2 class="logo">
+        <img src="../images/logo_empresa.avif" alt="Logo página" class="logo-image"> <!-- Muestra el logotipo de la empresa -->
+      </h2>
+      <input type="checkbox" id="menu-toggler"> <!-- Control para el menú desplegable en dispositivos móviles -->
+      <label for="menu-toggler" id="hamburger-btn">
+        <!-- Icono de menú (hamburguesa) para dispositivos móviles -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none"/> <!-- Espacio transparente -->
+          <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/> <!-- Tres líneas horizontales representando el menú -->
+        </svg>
+      </label>  
+      <ul class="all-links">
+        <!-- Lista de navegación principal -->
+        <li><a href="../html/inicio.html" class="underline-effect">Inicio</a></li>
+        <li><a href="../html/servicios.html" class="underline-effect">Servicios</a></li>
+        <li><a href="../html/nosotros.html" class="underline-effect">Nosotros</a></li>
+        <li><a href="../html/contacto.html" class="underline-effect">Contácto</a></li>
+      </ul>
+  </header>
+  <main>
+    <section class="contact-section">
+        <div class="contact-overlay">
+            <div class="contact-header">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para ayudarte en la transformación tecnológica de tu empresa. ¡Contáctanos hoy mismo!</p>
+            </div>
+            <form action="submit_form.php" method="post" class="contact-form">
+                <label for="name">Nombre completo del contacto</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre aquí" required>
+                
+                <label for="email">Correo electrónico del contacto*</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu email aquí" required>
+                
+                <label for="message">Mensaje o consulta*</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                
+                <button type="submit">Enviar consulta ahora</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="../images/photo-1423666639041-f56000c27a9a.avif" alt="Imagen de contacto">
+        </div>
+    </section>
+</main>
     <footer>
         <p>&copy; 2024 Innovative Solutions. Todos los derechos reservados.</p>
     </footer>

@@ -1,0 +1,233 @@
+/* General Reset */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Hace que el desplazamiento de la página sea suave */
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif; /* Establece la fuente predeterminada del cuerpo del documento */
+    line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
+  }
+  
+  header { 
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    left: 0; /* Posiciona el encabezado en el lado izquierdo */
+    z-index: 5; /* Asegura que el encabezado esté por encima de otros elementos */
+    width: 100%; /* Hace que el encabezado ocupe todo el ancho de la página */
+    display: flex; /* Utiliza flexbox para el diseño del encabezado */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background: white; /* Establece el fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera debajo del encabezado */
+  }
+  
+  .navbar {
+    height: 115px; /* Establece la altura de la barra de navegación */
+    background-color: white; /* Establece el fondo blanco */
+    display: flex; /* Utiliza flexbox para el diseño de la barra de navegación */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    padding: 0 20px; /* Añade un espaciado interno de 20 píxeles a los lados */
+    position: relative; /* Necesario para el menú móvil */
+  }
+  
+  .logo {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    padding-right: 500px; /* Añade un padding derecho de 500 píxeles */
+  }
+  
+  .logo-image {
+    height: 110px; /* Establece la altura de la imagen del logo */
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+    display: block; /* Hace que la imagen sea un bloque */
+    margin: 0; /* Elimina el margen */
+  }
+  
+  .all-links {
+    list-style: none; /* Elimina los estilos de lista */
+    display: flex; /* Utiliza flexbox para el diseño de los enlaces */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    text-decoration: none; /* Elimina la decoración del texto */
+    gap: 50px; /* Añade un espacio de 50 píxeles entre los elementos */
+  }
+  
+  .all-links li a {
+    font-size: 20px; /* Establece el tamaño de la fuente */
+    color: rgb(83,175,242); /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+  }
+  
+  .all-links li a:hover {
+    color: #0056b3; /* Cambia el color del texto al pasar el cursor */
+  }
+  
+  .all-links li a.active {
+    color: #0056b3;
+  }
+  #menu-toggler {
+    display: none;
+  }
+  
+  #hamburger-btn {
+    display: none;
+    cursor: pointer;
+    background-color: rgb(109, 81, 40);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+    .logo {
+      padding-right: 0;
+    }
+    .all-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    #menu-toggler:checked + #hamburger-btn + .all-links {
+      display: flex;
+    }
+  
+    #hamburger-btn {
+      display: block;
+    }
+  .all-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .all-links a {
+    font-size: 18px;
+  }
+  
+  }
+  
+  /*Underline efecto, código de las lineas y animación*/
+  
+  /* Base styles for the link */
+  .underline-effect {
+    position: relative; /* Posiciona el elemento relativamente */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente */
+    font-size: 16px; /* Establece el tamaño de la fuente */
+    color: #003399; /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+  }
+  
+  /* Create the underline effect */
+  .underline-effect::after {
+    content: ''; /* Añade contenido vacío */
+    position: absolute; /* Posiciona el elemento absolutamente */
+    left: 0; /* Posiciona el elemento a la izquierda */
+    bottom: -4px; /* Posiciona el elemento 4 píxeles debajo del texto */
+    width: 100%; /* Establece el ancho del elemento */
+    height: 2px; /* Establece la altura del elemento */
+    background-color: #003399; /* Establece el color de fondo */
+    transition: width 0.3s ease; /* Añade una transición suave al ancho */
+  }
+  
+  /* Hover effect */
+  .underline-effect:hover::after {
+    width: 120%; /* Aumenta el ancho al pasar el cursor */
+  }
+  
+/* Contact Section */
+.contact-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Overlay */
+.contact-overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+  padding: 30px;
+  border-radius: 15px;
+  width: 40%; /* Ocupa un 40% del ancho */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Contact Header */
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}

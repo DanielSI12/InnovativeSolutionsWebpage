@@ -1,71 +1,116 @@
 /* General Reset */
 * {
-    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
-    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
-  }
-  
-  html {
-    scroll-behavior: smooth; /* Hace que el desplazamiento de la página sea suave */
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif; /* Establece la fuente predeterminada del cuerpo del documento */
-    line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
-  }
-  
-  header { 
-    position: fixed; /* Fija el encabezado en la parte superior de la página */
-    top: 0; /* Posiciona el encabezado en la parte superior */
-    left: 0; /* Posiciona el encabezado en el lado izquierdo */
-    z-index: 5; /* Asegura que el encabezado esté por encima de otros elementos */
-    width: 100%; /* Hace que el encabezado ocupe todo el ancho de la página */
-    display: flex; /* Utiliza flexbox para el diseño del encabezado */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    background: white; /* Establece el fondo blanco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera debajo del encabezado */
-  }
-  
+  margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+  padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+}
+
+html {
+  scroll-behavior: smooth; /* Hace que el desplazamiento de la página sea suave */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Establece la fuente predeterminada del cuerpo del documento */
+  line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
+}
+
+header { 
+  position: fixed; /* Fija el encabezado en la parte superior de la página */
+  top: 0; /* Posiciona el encabezado en la parte superior */
+  left: 0; /* Posiciona el encabezado en el lado izquierdo */
+  z-index: 5; /* Asegura que el encabezado esté por encima de otros elementos */
+  width: 100%; /* Hace que el encabezado ocupe todo el ancho de la página */
+  display: flex; /* Utiliza flexbox para el diseño del encabezado */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  background: white; /* Establece el fondo blanco */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera debajo del encabezado */
+}
+
+.navbar {
+  height: 115px; /* Establece la altura de la barra de navegación */
+  background-color: white; /* Establece el fondo blanco */
+  display: flex; /* Utiliza flexbox para el diseño de la barra de navegación */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  padding: 0 20px; /* Añade un espaciado interno de 20 píxeles a los lados */
+  position: relative; /* Necesario para el menú móvil */
+}
+
+.logo {
+  margin-left: 0; /* Elimina el margen izquierdo */
+  padding-right: 500px; /* Añade un padding derecho de 500 píxeles */
+}
+
+.logo-image {
+  height: 110px; /* Establece la altura de la imagen del logo */
+  width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+  display: block; /* Hace que la imagen sea un bloque */
+  margin: 0; /* Elimina el margen */
+}
+
+.all-links {
+  list-style: none; /* Elimina los estilos de lista */
+  display: flex; /* Utiliza flexbox para el diseño de los enlaces */
+  margin: 0; /* Elimina el margen */
+  padding: 0; /* Elimina el padding */
+  text-decoration: none; /* Elimina la decoración del texto */
+  gap: 50px; /* Añade un espacio de 50 píxeles entre los elementos */
+}
+
+.all-links li a {
+  font-size: 20px; /* Establece el tamaño de la fuente */
+  color: rgb(83,175,242); /* Establece el color del texto */
+  text-decoration: none; /* Elimina la decoración del texto */
+}
+
+.all-links li a:hover {
+  color: #0056b3; /* Cambia el color del texto al pasar el cursor */
+}
+
+.all-links li a.active {
+  color: #0056b3;
+}
+#menu-toggler {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+  cursor: pointer;
+  background-color: rgb(109, 81, 40);
+}
+
+@media (max-width: 768px) {
   .navbar {
-    height: 115px; /* Establece la altura de la barra de navegación */
-    background-color: white; /* Establece el fondo blanco */
-    display: flex; /* Utiliza flexbox para el diseño de la barra de navegación */
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
-    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
-    padding: 0 20px; /* Añade un espaciado interno de 20 píxeles a los lados */
-    position: relative; /* Necesario para el menú móvil */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
-  
   .logo {
-    margin-left: 0; /* Elimina el margen izquierdo */
-    padding-right: 500px; /* Añade un padding derecho de 500 píxeles */
+    padding-right: 0;
   }
-  
-  .logo-image {
-    height: 110px; /* Establece la altura de la imagen del logo */
-    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
-    display: block; /* Hace que la imagen sea un bloque */
-    margin: 0; /* Elimina el margen */
-  }
-  
   .all-links {
-    list-style: none; /* Elimina los estilos de lista */
-    display: flex; /* Utiliza flexbox para el diseño de los enlaces */
-    margin: 0; /* Elimina el margen */
-    padding: 0; /* Elimina el padding */
-    text-decoration: none; /* Elimina la decoración del texto */
-    gap: 50px; /* Añade un espacio de 50 píxeles entre los elementos */
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
-  
-  .all-links li a {
-    font-size: 20px; /* Establece el tamaño de la fuente */
-    color: rgb(83,175,242); /* Establece el color del texto */
-    text-decoration: none; /* Elimina la decoración del texto */
+  #menu-toggler:checked + #hamburger-btn + .all-links {
+    display: flex;
   }
-  
-  .all-links li a:hover {
-    color: #0056b3; /* Cambia el color del texto al pasar el cursor */
+
+  #hamburger-btn {
+    display: block;
   }
-  
+.all-links li {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.all-links a {
+  font-size: 18px;
+}
+
+}
   /*Underline efecto, código de las lineas y animación*/
   
   /* Base styles for the link */
